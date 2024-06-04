@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#clientes-cadastrados">Clientes Cadastrados</a></li>
+                <li><a href="#tipo-cliente">Distribuição por Tipo de Cliente</a></li>
+                <li><a href="#evolucao-clientes">Evolução de Novos Clientes</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <section id="clientes-cadastrados">
+                <h2>Número Total de Clientes Cadastrados</h2>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 id="total-clientes">0</h3>
+                        <p>Total de clientes cadastrados</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tipo-cliente">
+                <h2>Distribuição por Tipo de Cliente</h2>
+                <div class="chart-container">
+                    <canvas id="tipoClienteChart"></canvas>
+                </div>
+            </section>
+
+            <section id="evolucao-clientes">
+                <h2>Evolução de Novos Clientes</h2>
+                <div class="chart-container">
+                    <canvas id="evolucaoClientesChart"></canvas>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
