@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <div class="dashboard">
         <div class="sidebar">
@@ -15,6 +17,9 @@
                 <li><a href="#clientes-cadastrados">Clientes Cadastrados</a></li>
                 <li><a href="#tipo-cliente">Distribuição por Tipo de Cliente</a></li>
                 <li><a href="#evolucao-clientes">Evolução de Novos Clientes</a></li>
+                <li><a href="#distribuicao-geografica">Distribuição Geográfica</a></li>
+                <li><a href="#faixa-etaria">Faixa Etária</a></li>
+                <li><a href="#genero">Gênero</a></li>
             </ul>
         </div>
         <div class="content">
@@ -41,9 +46,31 @@
                     <canvas id="evolucaoClientesChart"></canvas>
                 </div>
             </section>
+
+            <section id="distribuicao-geografica">
+                <h2>Distribuição Geográfica dos Clientes</h2>
+                <div class="chart-container">
+                    <canvas id="distribuicaoGeograficaChart"></canvas>
+                </div>
+            </section>
+
+            <section id="faixa-etaria">
+                <h2>Faixa Etária dos Clientes</h2>
+                <div class="chart-container">
+                    <canvas id="faixaEtariaChart"></canvas>
+                </div>
+            </section>
+
+            <section id="genero">
+                <h2>Gênero dos Clientes</h2>
+                <div class="chart-container">
+                    <canvas id="generoChart"></canvas>
+                </div>
+            </section>
         </div>
     </div>
 
     <script src="scripts.js"></script>
 </body>
+
 </html>
