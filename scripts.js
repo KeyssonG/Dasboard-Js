@@ -1,15 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-
+    // Configuração inicial do tema
     const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
     const currentTheme = localStorage.getItem('theme') || 'light';
-
     document.body.classList.toggle('dark-theme', currentTheme === 'dark');
     document.body.classList.toggle('light-theme', currentTheme === 'light');
-
     if (currentTheme === 'dark'){
         themeToggleCheckbox.checked = true;
     }
-
     themeToggleCheckbox.addEventListener('change', function () {
         if (this.checked) {
             document.body.classList.add('dark-theme');
@@ -22,6 +19,36 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Função de filtro por data
+    const startDateInput = document.getElementById('start-date');
+    const endDateInput = document.getElementById('end-date');
+    const filterButton = document.getElementById('filter-button');
+
+    function filterData() {
+        const startDate = new Date(startDateInput.value);
+        const endDate = new Date(endDateInput.value);
+
+        if (!isNaN(startDate) && !isNaN(endDate)) {
+            const filteredData = evolucaoClientes.labels.map((label, index) => {
+                const date = new Date(label);
+                if (date >= startDate && date <= endDate) {
+                    return evolucaoClientes.novosClientes[index];
+                }
+                return null;
+            }).filter(data => data !== null);
+
+            const filteredLabels = evolucaoClientes.labels.filter((label, index) => {
+                const date = new Date(label);
+                return date >= startDate && date <= endDate;
+            });
+
+            evolucaoClientesChart.data.labels = filteredLabels;
+            evolucaoClientesChart.data.datasets[0].data = filteredData;
+            evolucaoClientesChart.update();
+        }
+    }
+
+    filterButton.addEventListener('click', filterData);
 
     // Dados fictícios para simular o dashboard
     const totalClientes = 1500;
