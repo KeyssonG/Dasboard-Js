@@ -1,4 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+
+    document.body.classList.toggle('dark-theme', currentTheme === 'dark');
+    document.body.classList.toggle('light-theme', currentTheme === 'light');
+
+    if (currentTheme === 'dark'){
+        themeToggleCheckbox.checked = true;
+    }
+
+    themeToggleCheckbox.addEventListener('change', function () {
+        if (this.checked) {
+            document.body.classList.add('dark-theme');
+            document.body.classList.remove('light-theme');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.body.classList.add('light-theme');
+            document.body.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light')
+        }
+    });
+
+
     // Dados fictícios para simular o dashboard
     const totalClientes = 1500;
     const distribuicaoClientes = {
