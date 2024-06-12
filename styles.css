@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap');
 
 /* Variables */
@@ -120,7 +121,7 @@
   }
   
   .danger {
-    color: var(--clr-danger);
+    color: var(--clr-primary);
   }
   
   .warning {
@@ -128,218 +129,231 @@
   }
 
 /* Aside */
-aside {
-    height: 100vh;
-  }
-  
-  aside .top {
-    background: var(--clr-white);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1.4rem;
+aside .sidebar{
+  background: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  position: relative;
+  top: 1rem;
+ }
 
-  }
-  
-  aside .logo {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  aside .logo img {
-    width: 2rem;
-    height: 2rem;
-  }
+ aside h3{
+  font-weight: 500;
+ }
 
-  aside .top div.close span {
-    display: none;
-  }
-  
-  /* Sidebar */
-  aside .sidebar {
-    background: var(--clr-white);
-    display: flex;
-    flex-direction: column;
-    height: 86vh;
-    position: relative;
-    top: 1rem;
-    
-  }
-  
-  aside h3 {
-    font-weight: 500;
-  }
+ aside .sidebar a{
+  display: flex;
+  color: var(--clr-info-dark);
+  margin-left: 2rem;
+  gap: 1rem;
+  align-items: center;
+  height: 3.3rem;
+  transition: all .1s ease;
+ 
+ }
 
-  aside .sidebar a {
-    display: flex;
-    color: var(--clr-info-dark);
-    margin-left: 2rem;
-    gap: 1rem;
-    align-items: center;
-    height: 3.3rem;
-    transition: all 0.1s ease;
-  }
+ aside .sidebar a span{
+  font-size: 1.6rem;
+  transition: all .3s ease-in-out;
   
-  aside .sidebar a span {
-    font-size: 1.6rem;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  aside .sidebar a:last-child {
-    position: absolute;
-    bottom: 1rem;
-    width: 100%;
-  }
+ }
 
-  aside .sidebar a.active {
-    background-color: var(--clr-light);
-    color: var(--clr-primary);
-    margin-left: 0;
-    border-left: 5px solid var(--clr-primary);
-    margin-left: calc(1rem - 3px);
-  }
-  
-  aside .sidebar a:hover span {
-    margin-left: 1rem;
-  }
-  
-  aside .sidebar a span.msg_count {
-    background-color: var(--clr-danger);
-    color: var(--clr-white);
-    padding: 2px 5px;
-    font-size: 11px;
-    border-radius: var(--border-radius-1);
-  }
+ aside .sidebar a:last-child{
+  position: absolute;
+  bottom: 1rem; 
+  width: 100%;
+ }
+
+ aside .sidebar a.active{
+   background-color: var(--clr-light);
+   color: var(--clr-primary);
+   margin-left: 0;
+   border-left: 5px solid var(--clr-primary);
+   margin-left: calc(1rem - 3px);
+ }
+ aside .sidebar a:hover span{
+  margin-left: 1rem;
+ }
+
+ aside .sidebar a span.msg_count{
+   background-color: var(--clr-danger);
+   color: var(--clr-white);
+   padding: 2px 5px;
+   font-size: 11px;
+   border-radius: var(--border-radius-1);
+ }
 
 /* Main */
-main {
-    margin-top: 1.4rem;
-    width: auto;
-  }
-  
-  main input {
-    background-color: transparent;
-    border: 0;
-    outline: 0;
-    color: var(--clr-dark);
-  }
-  
-  main .date {
-    display: inline-block;
-    background: var(--clr-white);
-    border-radius: var(--border-radius-1);
-    margin-top: 1rem;
-    padding: 0.5rem 1.6rem;
-  }
-  
+main{
+  margin-top: 1.4rem;
+  width: auto;
+ }
+ main input {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: var(--clr-dark);
+ }
 
-  main .insights {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem;
-  }
-  
-  main .insights > div {
-    background-color: var(--clr-white);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    margin-top: 1rem;
-    box-shadow: var(--box-shadow);
-    transition: all 0.3s ease;
-  }
-  
-  main .insights > div:hover {
-    box-shadow: none;
-  }
+ main .date{
+  display: inline-block;
+  background: var(--clr-white);
+  border-radius: var(--border-radius-1);
+  margin-top: 1rem;
+  padding: 0.5rem 1.6rem;
+ }
 
-  main .insights > div span {
-    background: coral;
+main .insights{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 1.6rem;
+}
+main .insights>div{
+   background-color: var(--clr-white);
+   padding: var(--card-padding);
+   border-radius: var(--card-border-radius);
+   margin-top: 1rem;
+   box-shadow: var(--box-shadow);
+   transition: all .3s ease;
+}
+
+main .insights > div:hover{
+  box-shadow: none;
+}
+main .insights>div  span{
+   background: coral;
     padding: 0.5rem;
-    border-radius: 50%;
-    color: var(--clr-white);
-    font-size: 2rem;
-  }
-  
-  main .insights > div.expenses span {
-    background: var(--clr-danger);
-  }
-  
-  main .insights > div.income span {
-    background: var(--clr-success);
-  }
-  
-  main .insights > div .middle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-
-  main .insights > div .middle h1 {
-    font-size: 1.6rem;
-  }
-  
-  main h1 {
-    color: var(--clr-dark);
-  }
-  
-  main .insights h1 {
-    color: var(--clr-dark);
-  }
-  
-  main .insights h3 {
-    color: var(--clr-dark);
-  }
-  
-  main .insights p {
-    color: var(--clr-dark);
+     border-radius: 50%;
+     color: var(--clr-white);
+     font-size: 2rem; 
   }
 
-  main .insights .progress {
-    position: relative;
-    height: 68px;
-    width: 68px;
-    border-radius: 50px;
-  }
-  
-  main .insights svg {
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    top: 0;
-  }
-  
-  main .insights svg circle {
-    fill: none;
-    stroke: var(--clr-primary);
-    transform: rotate(270deg);
-    stroke-width: 5;
-  }
+main .insights > div.expenses span{
+   background: var(--clr-danger);
+}
+main .insights > div.income span{
+  background: var(--clr-success);
+}
 
-  main .insights .sales svg circle {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 150;
-  }
+main .insights > div .middle{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+main .insights > div .middle h1{
+  font-size: 1.6rem;
+}
+
+main h1{
+  color: var(--clr-dark);
+}
+main .insights h1{
+  color: var(--clr-dark);
+}
+main .insights h3{
+  color: var(--clr-dark);
+}
+main .insights p{
+  color: var(--clr-dark);
+}
+main .insights h3{
   
-  main .insights .expenses svg circle {
-    stroke-dashoffset: 10;
-    stroke-dasharray: 150;
-  }
+    color: var(--clr-dark);
   
-  main .insights .income svg circle {
-    stroke: var(--clr-success);
-  }
   
-  main .insights .progress .number {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+}
+
+main .insights .progress{
+  position: relative;
+  height: 68px;
+  width: 68px;
+  border-radius: 50px;
+}
+
+main .insights svg{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 0;
+}
+
+main .insights svg circle{
+  fill: none;
+  stroke: var(--clr-primary);
+   transform: rotate(270,80,80);
+   stroke-width: 5;
+}
+main .insights .sales svg circle{
+   stroke-dashoffset: 0;
+   stroke-dasharray: 150;
+}
+
+main .insights .expenses svg circle{
+  stroke-dashoffset: 10;
+  stroke-dasharray: 150;
+}
+main .insights .sales svg circle{
+  stroke-dashoffset: 0;
+  stroke-dasharray: 150;
+}
+main .insights .income svg circle{
+  stroke: var(--clr-success);
+}
+
+main .insights .progress .number{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* recent order */
+
+main .recent_order{
+   margin-top: 2rem;
+}
+
+main .recent_order h2{
+    color: var(--clr-dark);
+}
+
+main .recent_order h2{
+  margin-bottom: 0.8rem;
+}
+main .recent_order table{
+  background: var(--clr-white);
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: all .3s ease;
+  color: var(--clr-dark);
+}
+main .recent_order table:hover{
+  box-shadow: none;
+}
+
+main table tbody td{
+   height: 3.8rem;
+   border-bottom: 1px solid var(--clr-white);
+   color:var(--clr-dark-variant)
+}
+main table tbody tr:last-child td{
+   border: none;
+}
+
+
+main .recent_order a{
+  text-align: center;
+  display: block;
+  margin: 1rem;
+}
 
 /* Recent orders */
 main .recent_order {
@@ -410,10 +424,22 @@ main .recent_order {
 }
 
 /* Right */
-.right {
-  margin-top: 1.4rem;
-  padding: 0 1.8rem;
-}
+.right{
+    margin-top: 1.4rem;
+  }
+  .right h2{
+    color: var(--clr-dark);
+  }
+
+  .right .top{
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+  }
+
+  .right .top button{
+    display: none;
+  }
 
 .top {
   background: var(--clr-white);
@@ -449,47 +475,7 @@ main .recent_order {
   color: var(--clr-dark);
 }
 
-.recent-updates {
-  margin-top: 2rem;
-}
 
-.recent-updates h2 {
-  color: var(--clr-dark);
-}
-
-.recent-updates .updates {
-  background: var(--clr-white);
-  padding: var(--card-padding);
-  border-radius: var(--card-border-radius);
-  box-shadow: var(--box-shadow);
-  transition: all 0.3s ease;
-}
-
-.recent-updates .updates:hover {
-  box-shadow: none;
-}
-
-.recent-updates .updates .update {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.recent-updates .updates .update .profile-photo img {
-  height: 2.5rem;
-  width: 2.5rem;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.recent-updates .updates .update div {
-  color: var(--clr-dark);
-}
-
-.recent-updates .updates .update .message p {
-  font-size: 0.85rem;
-  margin-top: 0.5rem;
-}
 
 .sales-analytics {
   margin-top: 2rem;
@@ -551,56 +537,25 @@ main .recent_order {
   color: var(--clr-white);
 }
 
-/* Media Queries */
-@media screen and (max-width: 1200px) {
-  .container {
-    grid-template-columns: 6rem auto 16rem;
-  }
-
-  aside {
-    width: 6rem;
-  }
-
-  aside .sidebar {
-    align-items: center;
-  }
-
-  aside .sidebar a {
-    padding-left: 0.6rem;
-  }
-
-  aside .sidebar a span {
-    display: none;
-  }
-
-  aside .sidebar a:hover span {
-    display: inline;
-  }
-
-  aside .sidebar a:hover h3 {
-    display: none;
-  }
-}
-
 @media screen and (max-width:1200px) {
-    .container{
-      width: 94%;
-      grid-template-columns: 7rem auto 14rem;
-    }
-    aside .sidebar h3{
-      display: none;
-    }
-    aside .sidebar a{
-      width: 5.6rem;
-    }
-    aside .sidebar a:last-child{
-      position: relative;
-      margin-top: 1.8rem;
-    }
-    main .insights{
-      display: grid;
-      grid-template-columns: repeat(1,1fr);
-    }
+  .container{
+    width: 94%;
+    grid-template-columns: 7rem auto 14rem;
+  }
+  aside .sidebar h3{
+    display: none;
+  }
+  aside .sidebar a{
+    width: 5.6rem;
+  }
+  aside .sidebar a:last-child{
+    position: relative;
+    margin-top: 1.8rem;
+  }
+  main .insights{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
 }
 
 /* ****************
@@ -608,115 +563,117 @@ MEDIA QUERY PHONE
 ************************/
 
 @media screen and (max-width:768px) {
-  .container{
-    width: 100%;
-    grid-template-columns: repeat(1,1fr);
-  
-  }
-  
-  aside{
-    position: fixed;
-    width: 18rem;
-    z-index: 3;
-    height: 100vh;
-    background-color: var(--clr-white);
-    display: none;
-    left: -110px;
-    animation:  menuLeft .3s ease forwards;
-  }
-  
-  @keyframes menuLeft {
-      to{
-        left: 0;
-      }
-  }
-  
-
-
-
-  aside .logo h2{
-       display: inline;
-  }
-  aside .sidebar h3{
-    display: inline;
-  }
-  aside .sidebar a{
-    width: 100%;
-    height: 3.4rem;
-  }
-  aside .top div.close  span{
-     display: inline;
-     position: absolute;
-     right: 0;
-     margin-right:30px;
-     font-size: 35px;
-     cursor: pointer;
-  }
-
-    .right .top{
-       position: fixed;
-       top: 0;
-       left: 0;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       padding: 0 0.8rem;
-       background: var(--clr-white);
-       height: 4.6rem;
-       width: 100%;
-       z-index: 2;
-       box-shadow: 0 1rem 1rem var(--clr-light);
-       margin: 0;
-    }
-
-
- main .insights{
-  display: grid;
+.container{
+  width: 100%;
   grid-template-columns: repeat(1,1fr);
-  gap: 1.6rem;
-  padding: 40px;
- }
- main .recent_order{
-  padding: 30px;
-  margin: 0 auto;
- }
+
+}
+
+aside{
+  position: fixed;
+  width: 18rem;
+  z-index: 3;
+  height: 100vh;
+  background-color: var(--clr-white);
+  display: none;
+  left: -110px;
+  animation:  menuLeft .3s ease forwards;
+}
+
+@keyframes menuLeft {
+    to{
+      left: 0;
+    }
+}
 
 
 
-  .right .profile{
-    position: absolute;
-    left: 70%;
+
+aside .logo h2{
+     display: inline;
+}
+aside .sidebar h3{
+  display: inline;
+}
+aside .sidebar a{
+  width: 100%;
+  height: 3.4rem;
+}
+aside .top div.close  span{
+   display: inline;
+   position: absolute;
+   right: 0;
+   margin-right:30px;
+   font-size: 35px;
+   cursor: pointer;
+}
+
+  .right .top{
+     position: fixed;
+     top: 0;
+     left: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 0 0.8rem;
+     background: var(--clr-white);
+     height: 4.6rem;
+     width: 100%;
+     z-index: 2;
+     box-shadow: 0 1rem 1rem var(--clr-light);
+     margin: 0;
   }
 
-  .right .top .theme-toggler{
-    width: 4.4rem;
-    position: absolute;
-    left: 50%;
-  }
-   .right .profile .info{
-    display: none;
-   }
 
-   .right .top button{
-     display: inline-block;
-     background: transparent;
-     cursor: pointer;
-     color: var(--clr-dark);
-     position: absolute;
-     left: 1rem;
+main .insights{
+display: grid;
+grid-template-columns: repeat(1,1fr);
+gap: 1.6rem;
+padding: 40px;
+}
+main .recent_order{
+padding: 30px;
+margin: 0 auto;
+}
 
-   }
-   .right .recent_order{
-    padding: 0 30px;
-   }
-   .right .recent_updates{
-    padding: 0 40px;
-   }
-   .right .sales-analytics{
-    padding: 0 40px;
-   }
-   .right .add_product{
-    padding: 0 40px;
-    margin-bottom: 40px;
-   }
+
+
+.right .profile{
+  position: absolute;
+  left: 70%;
+}
+
+.right .top .theme-toggler{
+  width: 4.4rem;
+  position: absolute;
+  left: 50%;
+}
+ .right .profile .info{
+  display: none;
+ }
+
+ .right .top button{
+   display: inline-block;
+   background: transparent;
+   cursor: pointer;
+   color: var(--clr-dark);
+   position: absolute;
+   left: 1rem;
+
+ }
+ .right .recent_order{
+  padding: 0 30px;
+ }
+ .right .recent_updates{
+  padding: 0 40px;
+ }
+ .right .sales-analytics{
+  padding: 0 40px;
+ }
+ .right .add_product{
+  padding: 0 40px;
+  margin-bottom: 40px;
+ }
+
+
 }
