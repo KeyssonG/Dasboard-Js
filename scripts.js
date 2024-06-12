@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
         labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
         novosClientes: [100, 120, 150, 130, 200, 180]
     };
-    // Novos dados para gráficos demográficos
     const distribuicaoGeografica = {
         labels: ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'],
         data: [300, 200, 100, 600, 300]
@@ -72,6 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const genero = {
         labels: ['Masculino', 'Feminino', 'Outro'],
         data: [700, 750, 50]
+    };
+    const performanceVendas = {
+        volumeVendas: [250, 350, 200, 400, 300],
+        valorMedioCompra: [150, 200, 180, 220, 210, 250],
+        taxaConversao: [0.1, 0.15, 0.2, 0.25, 0.22, 0.3]
     };
 
     // Atualiza o número total de clientes cadastrados
@@ -194,4 +198,74 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Configuração do gráfico de volume de vendas por cliente
+    const volumeVendasChart = new Chart(document.getElementById('volumeVendasChart'), {
+        type: 'bar',
+        data: {
+            labels: performanceVendas.volumeVendas,
+            datasets: [{
+                label: 'Volume de Vendas',
+                data: performanceVendas.volumeVendas,
+                backgroundColor: '#42a5f5'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Configuração do gráfico de valor médio de compra por cliente
+    const valorMedioCompraChart = new Chart(document.getElementById('valorMedioCompraChart'), {
+        type: 'bar',
+        data: {
+            labels: performanceVendas.valorMedioCompra,
+            datasets: [{
+                label: 'Valor Médio de Compra',
+                data: performanceVendas.valorMedioCompra,
+                backgroundColor: '#66bb6a'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Configuração do gráfico de taxa de conversão de leads em clientes
+    const taxaConversaoChart = new Chart(document.getElementById('taxaConversaoChart'), {
+        type: 'line',
+        data: {
+            labels: performanceVendas.taxaConversao,
+            datasets: [{
+                label: 'Taxa de Conversão',
+                data: performanceVendas.taxaConversao,
+                fill: false,
+                borderColor: '#ef5350',
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 1
+                }
+            }
+        }
+    });
+
 });
