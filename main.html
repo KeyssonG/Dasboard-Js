@@ -26,7 +26,7 @@
                     <span class="material-icons-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="#">
+                <a href="#" class="active">
                     <span class="material-icons-sharp">person_outline</span>
                     <h3>Clientes</h3>
                 </a>
@@ -65,7 +65,261 @@
                 </a>
             </div>
         </aside>
-    </div>
-</body>
+        <main>
+            <h1>Dashboard</h1>
 
+            <div class="date">
+                <input type="date">
+            </div>
+            <div class="insights">
+                <div class="sales">
+                    <span class="material-icons-sharp">analytics</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Vendas</h3>
+                            <h1>R$23.024</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Últimas 24h</small>
+                </div>
+
+                <div class="expenses">
+                    <span class="material-icons-sharp">bar_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Despesas</h3>
+                            <h1>R$10.978</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>62%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Últimas 24h</small>
+                </div>
+
+                <div class="income">
+                    <span class="material-icons-sharp">stacked_line_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Lucro</h3>
+                            <h1>R$6.974</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>44%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Últimas 24h</small>
+                </div>
+            </div>
+            <div class="recent-orders">
+                <h2>Pedidos recentes</h2>
+                <table>
+                    <thead>
+                        <th>Nome do Produto</th>
+                        <th>Número do produto</th>
+                        <th>Pagamento</th>
+                        <th>Status</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Placa de Video RTX 3060</td>
+                            <td>64857</td>
+                            <td>Due</td>
+                            <td class="warning">Pendente</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>Fonte MSI MAG A650BN</td>
+                            <td>82915</td>
+                            <td>Due</td>
+                            <td class="warning">Pendente</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>Memória RAM Kingston Fury Beast, 8GB</td>
+                            <td>67195</td>
+                            <td>Due</td>
+                            <td class="warning">Pendente</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>SSD SATA Kingston, A400, 240GB</td>
+                            <td>97315</td>
+                            <td>Due</td>
+                            <td class="warning">Pendente</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>Water Cooler Rise Mode, ARGB</td>
+                            <td>64857</td>
+                            <td>Due</td>
+                            <td class="warning">Pendente</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>Memória RAM Rise Mode Z, 8GB</td>
+                            <td>41258</td>
+                            <td>Due</td>
+                            <td class="warning">Pendente</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>Placa Mãe Gigabyte B550M</td>
+                            <td>36795</td>
+                            <td>Due</td>
+                            <td class="warning">Pendente</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>Processador AMD Ryzen 5 4600G</td>
+                            <td>16748</td>
+                            <td>Due</td>
+                            <td class="warning">Pendente</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <a href="#">Mostrar tudo</a>
+            </div>
+        </main>
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Olá, <b>Keysson</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                </div>
+                <div class="profile-photo">
+                    <img src="images/image-profile.jpg" alt="Foto de perfil do administrador e desenvolvedor, keysson">
+                </div>
+            </div>
+            <div class="recent-updates">
+                <h2>Últimas atualizações</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="images/image-profile.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>keysson:</b> Pedidos do dia 12/06 enviados para transportadora.</p>
+                            <small class="text-muted">Há 10 minutos.</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="images/image-profile.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>keysson:</b> Códigos de rastreio enviados via e-mail.</p>
+                            <small class="text-muted">Há 25 minutos.</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="images/image-profile.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>keysson:</b> Ticket de devolução de pedido respondido.</p>
+                            <small class="text-muted">Há 30 minutos.</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="images/image-profile.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>keysson:</b> Retorno da transportadora sobre os pedidos não recebidos.</p>
+                            <small class="text-muted">Há 34 minutos.</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="images/image-profile.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>keysson:</b> Relatório de notas fiscais disponivéis no portal.</p>
+                            <small class="text-muted">Há 1 hora.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sales-analytics">
+                <h2>Análise de Vendas</h2>
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-icons-sharp">shopping_cart</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Pedidos on-line</h3>
+                            <small class="text-muted">Últimas 24 horas</small>
+                        </div>
+                        <h5 class="success">+45%</h5>
+                        <h3>7319</h3>
+                    </div>
+                </div>
+                <div class="item offline">
+                    <div class="icon">
+                        <span class="material-icons-sharp">local_mall</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Pedidos off-line</h3>
+                            <small class="text-muted">Últimas 24 horas</small>
+                        </div>
+                        <h5 class="danger">-15%</h5>
+                        <h3>1548</h3>
+                    </div>
+                </div>
+                <div class="item customers">
+                    <div class="icon">
+                        <span class="material-icons-sharp">person</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Novos Clientes</h3>
+                            <small class="text-muted">Últimas 24 horas</small>
+                        </div>
+                        <h5 class="success">+19%</h5>
+                        <h3>915</h3>
+                    </div>
+                </div>
+                <div class="item add-product">
+                    <div>
+                        <span class="material-icons-sharp">add</span> 
+                        <h3>Adicionar Produto</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
 </html>
