@@ -41,7 +41,7 @@ ul {
     margin: 0 auto;
 }
 
-.wrapper>div {
+.wrapper > div {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -50,10 +50,10 @@ ul {
     margin: 5em auto;
     background-color: var(--main-color);
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.45)  0 25px 20px -20px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0 25px 20px -20px;
 }
 
-:is(.login, .signup)>div {
+:is(.login, .signup) > div {
     position: relative;
     flex: 1 0 50%;
     padding: 60px;
@@ -94,10 +94,6 @@ a {
     text-align: center;
 }
 
-/*.login {
-    display: none !important;
-}*/
-
 form input:not(#terms, #remember) {
     font-family: inherit;
     width: 100%;
@@ -120,10 +116,9 @@ form button {
     border: 0;
     line-height: 42px;
     border-radius: 7px;
-    font-weight: 70;
+    font-weight: 700;
     cursor: pointer;
-    transition: all .3s ease-out;
-    -webkit-transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 button:hover {
@@ -148,9 +143,19 @@ button:hover {
     top: 4px;
 }
 
+
 form .forgot {
     float: right;
     font-size: 12px;
+}
+
+.forgot a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    border-bottom: 1px dotted var(--main-color);
 }
 
 form label a,
@@ -171,18 +176,21 @@ form :is(p, label) a:hover,
     background-color: #fff;
     border-radius: 60%;
     transform: translate3d(-27%, -27%, 0);
-    -webkit-transform: translate3d(-27%, -27%, 0);
-
     animation: fade-in 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-    -webkit-animation: fade-in 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .y-style {
     position: relative;
     transform: translate3d(0, 20%, 0);
-    -webkit-transform: translate3d(0, 20%, 0);
     animation: fade-in 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-    -webkit-animation: fade-in 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.afterform .t-signup {
+    color: black;   
+}
+
+.afterform .t-login {
+    color: black;   
 }
 
 @keyframes fade-in {
@@ -202,9 +210,9 @@ form :is(p, label) a:hover,
 .social :is(ul, p) {
     display: flex;
     justify-content: center;
-    position: relative;
-    gap: 24px; /* Adicionar unidade 'px' */
+    gap: 24px;
     margin: 20px 0;
+    position: relative;
 }
 
 .social p::before {
@@ -229,13 +237,11 @@ form :is(p, label) a:hover,
     display: flex;
     font-size: 20px;
     transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transition: transform .3s;
+    transition: transform 0.3s;
 }
 
 .social a:hover {
     transform: translateY(-5px);
-    -webkit-transform: translateY(-5px);
 }
 
 .social .google {
@@ -261,7 +267,7 @@ form :is(p, label) a:hover,
 }
 
 @media screen and (min-width: 768px) {
-    .wrapper>div {
+    .wrapper > div {
         flex-direction: row;
         max-width: 800px;
     }
@@ -273,14 +279,12 @@ form :is(p, label) a:hover,
 
     .content-form::before {
         transform: translate3d(-20%, -20%, 0);
-        -webkit-transform: translate3d(-20%, -15%, 0);
     }
 
     .welcome {
         text-align: left;
         margin: 5em 0 auto;
     }
-
 }
 
 @media screen and (max-width: 767px) {
@@ -291,6 +295,7 @@ form :is(p, label) a:hover,
         border-radius: 60%;
         transform: translate3d(5%, -5%, 0);
         -webkit-transform: translate3d(-90%, -2%, 0);
-        opacity: 10; /* Opacidade ajustada */
+        opacity: 0.1;
     }
 }
+
