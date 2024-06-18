@@ -272,8 +272,8 @@ form :is(p, label) a:hover,
     }
 
     .content-form::before {
-        transform: translate3d(-18%, -10%, 0);
-        -webkit-transform: translate3d(-18%, -10%, 0);
+        transform: translate3d(-20%, -20%, 0);
+        -webkit-transform: translate3d(-20%, -15%, 0);
     }
 
     .welcome {
@@ -281,4 +281,16 @@ form :is(p, label) a:hover,
         margin: 5em 0 auto;
     }
 
+}
+
+@media screen and (max-width: 767px) {
+    .content-form::before {
+        width: 200%;
+        height: 200%;
+        background-color: #fff;
+        border-radius: 60%;
+        transform: translate3d(5%, -5%, 0);
+        -webkit-transform: translate3d(-90%, -2%, 0);
+        opacity: 10; /* Opacidade ajustada */
+    }
 }
