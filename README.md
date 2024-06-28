@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Find é um painel de controle (dashboard) voltado para a administração de vendas, clientes, pedidos, análises, mensagens, produtos, relatórios e configurações. O projeto visa fornecer uma interface intuitiva e eficiente para gerenciar todas essas áreas, oferecendo uma visão clara e abrangente das operações diárias.
 
 Principais Funcionalidades
