@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Find é um painel de controle (dashboard) voltado para a administração de vendas, clientes, pedidos, análises, mensagens, produtos, relatórios e configurações. O projeto visa fornecer uma interface intuitiva e eficiente para gerenciar todas essas áreas, oferecendo uma visão clara e abrangente das operações diárias.
 
 Principais Funcionalidades
@@ -78,3 +79,6 @@ Para mais informações ou suporte, entre em contato com o administrador do sist
 
 
 Find oferece uma solução completa para a gestão de negócios, unindo simplicidade, eficiência e funcionalidade em um único painel de controle.
+=======
+
+>>>>>>> 943e53ee38e05442768e0dfc6e79089fd0b32e18
